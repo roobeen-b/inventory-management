@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include('nav') %>
+    <div class="container">
+      <div class="items">
+        <h2>Total Items</h2>
+        <p class="total-items"><%= items.length %></p>
+        <a href="/items/add" class="add-item">Add Item</a>
+      </div>
+      <div class="categories">
+        <h2>Total Categories</h2>
+        <p class="total-categories"><%= categories.length %></p>
+        <a href="/categories/add" class="add-category">Add Category</a>
+      </div>
+    </div>
+  </body>
+</html>
