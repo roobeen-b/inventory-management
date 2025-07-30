@@ -17,7 +17,8 @@ VALUES
   ('Vegetables'),
   ('Clothing'),
   ('Electronics'),
-  ('Books');
+  ('Books')
+  ON CONFLICT (category_name) DO NOTHING;
 
 CREATE TABLE IF NOT EXISTS items (
   id SERIAL PRIMARY KEY,
@@ -37,7 +38,6 @@ VALUES
   ('T-Shirt', 50, 15.99, 4),
   ('Smartphone', 30, 499.99, 5),
   ('Novel', 25, 12.99, 6);
-
 `;
 
 async function main() {
